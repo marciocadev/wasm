@@ -1,0 +1,10 @@
+[package]
+name = "rust-wasm-lib"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rust-lib = { version = "0.1.0", path = "../rust-lib" }
+
+[lib]
+crate-type = ["rlib", "cdylib"]
