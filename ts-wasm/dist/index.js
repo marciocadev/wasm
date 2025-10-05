@@ -66,7 +66,6 @@ const main = async () => {
     if (typeof receive_strings === "function") {
         const memory = wasmModule.instance.exports.memory;
         const encoder = new TextEncoder();
-        // const decoder = new TextDecoder();
         // Helper to write a string into WASM memory and return its pointer
         function writeStringToMemory(str, offset) {
             const encoded = encoder.encode(str + "\0"); // null-terminated
